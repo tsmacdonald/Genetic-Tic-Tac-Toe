@@ -1,6 +1,6 @@
 ## Generically Generating AI
 
-Uses genetic programming to create an intelligent agent for potentially-arbitrary adversarial circumstances. Currently, this uses tic-tac-toe as a case study.
+Uses genetic programming to create an intelligent agent for arbitrary adversarial circumstances. Currently, this uses tic-tac-toe as a case study.
 
 There's a small core of situation-specific AI code which forms the gene pool. These are all incredibly simplistic ("if the corners are filled, consider filling the center", or "if there are two in a row, consider filling the third cell in the series"). The main AI engine, though, combines these genes to form a new agent. Genes deemed helpful are replicated and thus given more importance. Genes deemed unhelpful are sifted out from one generation to the next. (Incidentally, this makes the process of gene creation more painless--there is no major penalty with creating truly unhelpful genes.) Along the way, some genes are randomly mutated to increase diversity--otherwise performance would be constrained by the set defined by all linear combinations of the gene pool, which might not have a worthwile solution.
 
